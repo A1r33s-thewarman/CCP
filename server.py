@@ -4,8 +4,8 @@ from flask import request
 
 api = Flask(__name__)
 
-@api.route('/companies', methods=['POST'])
-def get_companies():
+@api.route('/sentence', methods=['POST'])
+def get_sentence():
     sentence = request.form.get('sentence')
     ret = [{"id": 1, "sinhala": str(sentence)}]
     return json.dumps(ret)
