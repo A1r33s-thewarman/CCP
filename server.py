@@ -19,6 +19,7 @@ def custom_standardization(input_string):
 
 from translator import *
 from language_identification import detector
+from bleu import sentence_bleu
 
 api = Flask(__name__)
 
@@ -27,12 +28,19 @@ def get_sentence():
     sentence = request.form.get('sentence')
     # do all things here
     wrds = list(sentence.split())
-
     detected = detector(sentence)
     detected_ret = dict(zip(wrds, detected))
     sinhala_sen = sentence_translator(sentence)
     ret = [{"id": 1, "sinhala": str(sinhala_sen), "words": detected_ret}]
+    return json.dumps(ret)
 
+@api.route('/scoring', methods=['POST'])
+def get_score():
+    translated = request.form.get('translated')
+    reference = request.form.get('reference')
+    # do all things here
+    bleu_score = sentence_bleu(reference, translated)
+    ret = [{"id": 1, "bleu": str(bleu_score), "sentiment": str(bleu_score)}]
     return json.dumps(ret)
 
 if __name__ == '__main__':
