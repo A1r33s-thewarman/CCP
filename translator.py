@@ -195,8 +195,11 @@ def decode_sequence(input_sentence):
             break
     return decoded_sentence
 
-input_sentence = 'service eka hondhai'
-translated = decode_sequence(input_sentence)
-print('---------------------------')
-print(input_sentence)
-print(translated)
+
+def sentence_translator(sentence):
+    input_sentence = sentence
+    translated = decode_sequence(input_sentence)
+    print('---------------------------')
+    print(input_sentence)
+    print(translated)
+    return translated
