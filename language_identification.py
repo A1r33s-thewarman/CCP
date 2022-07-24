@@ -1,14 +1,26 @@
 import pandas as pd
+import enchant
+
+d = enchant.Dict("en_US")
 
 df_words = pd.read_csv('datasets/words.csv')
+
+def new_word(word):
+    result = d.check(str(word))
+    new_row = {'words':str(word), 'tf':result}
+    #append row to the dataframe
+    df_words = df_words.append(new_row, ignore_index=True)
 
 def detector(sentence):
     wrds = list(sentence.split())
     prob = []
     for w in wrds:
-        prob.append(str(df_words['tf'].loc[df_words['words'] == w].values[0]))
+        if w in df_words['words']:
+            prob.append(str(df_words['tf'].loc[df_words['words'] == w].values[0]))
+        else:
+            print('bla bla')
     return prob
 
 
-# ret = detector('price ekata shape wenna hondha rasata kaama')
+# ret = detector('test this')
 # print(ret)
