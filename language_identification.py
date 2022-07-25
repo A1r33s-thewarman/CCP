@@ -10,6 +10,7 @@ def new_word(word):
     new_row = {'words':str(word), 'tf':result}
     #append row to the dataframe
     df_words = df_words.append(new_row, ignore_index=True)
+    return result
 
 def detector(sentence):
     wrds = list(sentence.split())
@@ -18,7 +19,7 @@ def detector(sentence):
         if w in df_words['words']:
             prob.append(str(df_words['tf'].loc[df_words['words'] == w].values[0]))
         else:
-            print('bla bla')
+            prob.append(new_word(w))
     return prob
 
 
