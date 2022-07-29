@@ -1,5 +1,7 @@
 from flask import Flask, json
 from flask import request
+from flask_cors import CORS
+
 # import pathlib
 # import random
 # import string
@@ -22,6 +24,8 @@ from language_identification import detector
 from bleu import sentence_bleu
 
 api = Flask(__name__)
+CORS(api)
+
 
 @api.route('/sentence', methods=['POST'])
 def get_sentence():
