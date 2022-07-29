@@ -35,6 +35,8 @@ def get_sentence():
     detected = detector(sentence)
     detected_ret = dict(zip(wrds, detected))
     sinhala_sen = sentence_translator(sentence)
+    sinhala_sen = sinhala_sen.replace('[start]','')
+    sinhala_sen = sinhala_sen.replace('[end]','')
     ret = [{"id": 1, "sinhala": str(sinhala_sen), "words": detected_ret}]
     return json.dumps(ret)
 
