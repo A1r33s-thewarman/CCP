@@ -16,7 +16,7 @@ const SidebarItems = [
         route: '/page-2'
     },
     {
-        name: "Only Fans",
+        name: "Bravo 6 going dark",
         route: 'page-3'
     },
 ];

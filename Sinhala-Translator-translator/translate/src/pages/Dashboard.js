@@ -56,9 +56,10 @@ axios({
 <p class="point">Sinhala</p>
 <input className="rounded" type="text" name="translated" value={translated} onChange={(e) => settranslated(e.target.value)}/>
 
-<button onClick={InputField}>Translate</button>
+<button onClick={InputField} class="roudnbtn">Translate</button>
 
     </div>
+
   </div>
 
 
