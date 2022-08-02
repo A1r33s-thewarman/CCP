@@ -11,7 +11,7 @@ def new_word(word):
     new_row = {'words':str(word), 'tf':result}
     #append row to the dataframe
     df_words = df_words.append(new_row, ignore_index=True)
-    df_words.to_csv('datasets/words.csv')
+    df_words.to_csv('datasets/words.csv', index=False)
     return result
 
 def detector(sentence):
