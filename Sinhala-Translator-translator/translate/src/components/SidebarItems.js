@@ -4,7 +4,7 @@ const SidebarItems = [
         route: '/'
     },
     {
-        name: "Developmer",
+        name: "Developer",
         route: '/dashboard',
     },
     {
@@ -16,7 +16,7 @@ const SidebarItems = [
         route: '/page-2'
     },
     {
-        name: "Bravo 6 going dark",
+        name: "Test for normalization",
         route: 'page-3'
     },
 ];

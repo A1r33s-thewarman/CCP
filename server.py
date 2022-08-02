@@ -1,7 +1,7 @@
 from flask import Flask, json
 from flask import request
 from flask_cors import CORS
-
+from googletrans import Translator
 # import pathlib
 # import random
 # import string
@@ -14,6 +14,8 @@ from flask_cors import CORS
 # import pandas as pd
 # import numpy as np
 # import pickle
+translator = Translator()
+print(translator.translate('안녕하세요.'))
 
 def custom_standardization(input_string):
     lowercase = tf.strings.lower(input_string)
@@ -37,7 +39,9 @@ def get_sentence():
     sinhala_sen = sentence_translator(sentence)
     sinhala_sen = sinhala_sen.replace('[start]','')
     sinhala_sen = sinhala_sen.replace('[end]','')
-    ret = [{"id": 1, "sinhala": str(sinhala_sen), "words": detected_ret}]
+    print('=========')
+    english_meaning = translator.translate(sinhala_sen)
+    ret = [{"id": 1, "sinhala": str(sinhala_sen), "english": str(english_meaning.text), "words": detected_ret}]
     return json.dumps(ret)
 
 @api.route('/scoring', methods=['POST'])

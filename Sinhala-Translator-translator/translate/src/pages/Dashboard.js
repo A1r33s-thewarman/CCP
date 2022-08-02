@@ -26,6 +26,7 @@ axios({
     console.log(`statusCode: ${res.statusCode}`)
     console.log(res.data[0]['sinhala'])
     settranslated(res.data[0]['sinhala'])
+    setenglish(res.data[0]['english'])
   })
   .catch(error => {
     console.error(error)
@@ -40,7 +41,7 @@ axios({
 <div className="topset">
     <div className="center">
       <p class="point">English/Singlish</p>
-      <input className="rounded" type="text" name="sande" value={upatt} onChange={(e) => setUPatt(e.target.value)}/>
+      <textarea className="rounded" type="text" name="sande" value={upatt} onChange={(e) => setUPatt(e.target.value)}/>
 </div>
 </div>
 
@@ -51,10 +52,10 @@ axios({
 
     <p class="point">English</p>
 
-<input className="rounded" type="text" name="english" value={english} onChange={(e) => setenglish(e.target.value)}/>
+<textarea className="rounded" type="text" name="english" value={english} onChange={(e) => setenglish(e.target.value)}/>
 
 <p class="point">Sinhala</p>
-<input className="rounded" type="text" name="translated" value={translated} onChange={(e) => settranslated(e.target.value)}/>
+<textarea className="rounded" type="text" name="translated" value={translated} onChange={(e) => settranslated(e.target.value)}/>
 
 <button onClick={InputField} class="roudnbtn">Translate</button>
 
