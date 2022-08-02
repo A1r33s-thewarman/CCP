@@ -44,3 +44,12 @@ npm install
 ```shell
 npm start
 ```
+
+##Members
+| Name  |  SLIIT ID |  Curtin ID |
+| :------------: | :------------: | :------------: |
+|  L. P. W. Perera |  IT20070762 | 20906463  |
+|  B. M. Wijethunga | IT20190248  | 20906421  |
+|  K.S.M.D. Kaushalya |  IT20187378 | 20907709  |
+|  T.J.A.R.K. Thennakumbura |  IT20251628 |  20907657 |
+
