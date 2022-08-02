@@ -5,7 +5,7 @@ const SidebarItems = [
     },
     {
         name: "Developer",
-        route: '/dashboard',
+        route: '/developer',
     },
     {
         name: "Feedback",

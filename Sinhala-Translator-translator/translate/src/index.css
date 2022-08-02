@@ -39,11 +39,17 @@ body {
   padding: 10px;
 }
 .point{
+  margin-top: 60px;
+  color: white;
+  font-size: 20px;
+}
+.pointa{
   margin-top: 100px;
   color: white;
+  font-size: 30px;
 }
 .topset{
-  margin-top: 100px;
+  margin-top: 70px;
 }
 .roudnbtn{
   background-color: #04AA6D;
@@ -67,7 +73,7 @@ textarea.rounded {
 	-moz-box-shadow: 2px 2px 3px #666;
 	-webkit-box-shadow: 2px 2px 3px #666;
 margin-top: 10px;
-	font-size: 15px;
+	font-size: 25px;
 	padding: 50px 20px;
 	outline: 0;
   color: white;
@@ -75,6 +81,25 @@ margin-top: 10px;
 	-webkit-appearance: none;
 }
 textarea.rounded:focus {
+	border-color: #3669FF;
+}
+textarea.roundeda {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+  background: #1C1B20;
+	border-radius: 10px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+margin-top: 10px;
+	font-size: 60px;
+	padding: 50px 20px;
+	outline: 0;
+  color: white;
+
+	-webkit-appearance: none;
+}
+textarea.roundeda:focus {
 	border-color: #3669FF;
 }
 

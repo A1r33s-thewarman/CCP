@@ -4,6 +4,7 @@ import Page1 from "./pages/Page-1";
 import Page2 from "./pages/Page-2";
 import Page3 from "./pages/Page-3";
 import Dashboard from "./pages/Dashboard";
+import Developer from "./pages/Developer";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 
@@ -14,7 +15,7 @@ function Routes() {
                 <Layout {...props}>
                     <Switch>
                         <Route path="/" exact component={Dashboard}/>
-                        <Route path="/dashboard" exact component={Dashboard}/>
+                        <Route path="/developer" exact component={Developer}/>
                         <Route path="/page-1" component={Page1}/>
                         <Route path="/page-2" component={Page2}/>
                         <Route path="/page-3" component={Page3}/>

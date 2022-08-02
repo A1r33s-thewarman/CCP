@@ -5,7 +5,7 @@ import '../index.css';
 const axios = require('axios');
 var FormData = require('form-data');
 
-function Dashboard(props) {
+function Developer(props) {
 
   const [upatt, setUPatt] = React.useState("");
   const [translated, settranslated] = React.useState("");
@@ -36,27 +36,17 @@ axios({
   }
     return (
         <div className="dash" >
-          <h2 style={{color: "white"}}>Let's translate that Text for you 😄</h2>
         <div class="row">
-    <div class="column">
-<div className="topset">
     <div className="center">
-      <p class="point">English/Singlish</p>
-      <textarea className="rounded" type="text" name="sande" value={upatt} onChange={(e) => setUPatt(e.target.value)}/> <br></br>
+      <p class="pointa">Write to Developers 🧐</p>
+      <textarea className="roundeda" type="text" name="sande" value={upatt} onChange={(e) => setUPatt(e.target.value)}/><br></br>
       <br></br>
-      <button onClick={InputField} class="roudnbtn">Translate</button>
-</div>
-</div>
+      <button onClick={InputField} class="roudnbtn">Submit</button>
 
     </div>
     <div class="column" >
 
-    <p class="point">English</p>
 
-<textarea className="rounded" type="text" name="english" value={english} onChange={(e) => setenglish(e.target.value)}/>
-
-<p class="point">Sinhala</p>
-<textarea className="rounded" type="text" name="translated" value={translated} onChange={(e) => settranslated(e.target.value)}/>
 
     </div>
 
@@ -70,4 +60,4 @@ axios({
     );
 }
 
-export default Dashboard;
+export default Developer;
