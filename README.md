@@ -13,15 +13,15 @@ sentiment analysis and BLEU score evaluation.
 Navigate to cloned project using command prompt.
 ####Start Backend Server
 - Install python modules
-```bash
+```shell
 pip install -r requirements.txt
 ```
 - Start server
-```bash
+```shell
 python server.py
 ```
 - If the server properly started, below output will display.
-```python
+```shell
 Serving Flask app 'server' (lazy loading)
 Environment: production
 WARNING: This is a development server. Do not use it in a production deployment.
@@ -33,14 +33,14 @@ Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 ####Run frontend application
 
 - Navigate to *Sinhala-Translator-translator/translate* directory.
-```python
+```shell
 cd Sinhala-Translator-translator/translate
 ```
 - Install node modules
-```bash
+```shell
 npm install
 ```
 - Start application
-```bash
+```shell
 npm start
 ```
